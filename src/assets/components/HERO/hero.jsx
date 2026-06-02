@@ -2,45 +2,87 @@ import { motion } from "motion/react";
 
 export default function Hero() {
   return (
-    <section className="px-6 py-8 justify-center h-185 bg-white">
-      <div className="flex flex-col md:flex-row items-center justify-center gap-2">
-        <div className="flex flex-col items-start text-left max-w-xl">
-          <h1 className="text-2xl font-medium mb-2">
-            <span className="text-[#89E900] font-sans text-3xl md:text-5xl">
-              NJOROGE
-            </span>
-            <br />
-            <span className="text-[#89E900] font-sans text-3xl md:text-5xl">
-              WA MBAIKIA
-            </span>
-          </h1>
+    <section className="flex w-500 mx-auto bg-[#f5f4f0] overflow-hidden justify-center">
 
-          <p className="font-medium mb-6 text-black leading-relaxed text-sm md:text-base">
-            I am committed to building a stronger and better tomorrow by taking
-            deliberate action today to create meaningful and lasting change.
-            Through dedication, innovation, and responsibility, I strive to
-            contribute to solutions that uplift communities and improve lives.
-            My goal is to help shape a future that is more inclusive, resilient,
-            and full of opportunity for everyone.
-          </p>
+      {/* Left — Text */}
+      <div className="flex flex-col justify-center px-8 py-16 w-[600px]">
 
-          <button className="bg-[#222222] text-[#89E900] px-6 py-2.5 rounded-2xl font-medium text-sm hover:scale-105 transition">
-            JOIN THE MOVEMENT
-          </button>
+        {/* Constituency tag */}
+        <div className="flex items-center gap-3 mb-10">
+          <span className="w-5 h-[1.5px] bg-[#89E900] block" />
+          <span className="text-[11px] font-medium tracking-[0.12em] uppercase text-neutral-500">
+            Member of Parliament · Juja Constituency
+          </span>
         </div>
 
-        <div className="relative flex items-center justify-center py-6">
-          <div className="relative z-10 flex items-end justify-center py-6">
-            <motion.img
-              src="https://i.postimg.cc/3xG4CNCF/erasebg-transformed.png"
-              alt="product"
-              className="w-64 h-64 md:w-170 md:h-170 object-cover relative z-10"
-              animate={{ y: [0, -15, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            />
-          </div>
+        {/* Name */}
+        <h1
+          className="text-5xl md:text-6xl font-bold leading-[1.05] tracking-tight mb-2 text-neutral-900"
+          style={{ fontFamily: "'Playfair Display', serif" }}
+        >
+          Njoroge<br />
+          <span className="text-[#89E900]">wa Mbaikia</span>
+        </h1>
+
+        <p className="text-[13px] uppercase tracking-[0.06em] text-neutral-400 mb-8">
+          Parliamentary Candidate · 2027
+        </p>
+
+        {/* Divider */}
+        <div className="w-10 h-[2px] bg-neutral-900 mb-6" />
+
+        {/* Body */}
+        <p className="text-sm text-neutral-500 leading-[1.8] max-w-sm mb-10 font-light">
+          Deliberate action. Lasting change.<br />
+          Building a Juja that works for everyone — through accountability,
+          innovation, and community-first leadership.
+        </p>
+
+        {/* CTAs */}
+        <div className="flex items-center gap-6">
+          <button className="bg-neutral-900 text-[#89E900] px-7 py-3 text-[12px] font-medium tracking-[0.1em] uppercase rounded-sm hover:bg-neutral-800 transition">
+            Join the Movement
+          </button>
+          <span className="text-[15px] font-medium tracking-wide text-neutral-400 border-b border-neutral-300 pb-0.5 cursor-pointer hover:text-neutral-600 transition">
+            Our Vision →
+          </span>
+        </div>
+
+        {/* Stat strip */}
+        <div className="flex gap-10 mt-8 pt-6 border-t border-neutral-200">
+          {[
+            { num: "Juja", label: "Constituency" },
+            { num: "2027", label: "Election" },
+            { num: "People", label: "First Priority" },
+          ].map(({ num, label }) => (
+            <div key={label} className="flex flex-col gap-3 items-start">
+              <span
+                className="text-2xl font-bold text-neutral-900"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                {num}
+              </span>
+              <span className="text-[11px] uppercase tracking-[0.08em] text-neutral-400">
+                {label}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
+
+      {/* Right — Image */}
+      <div className="relative w-[390px] flex items-center justify-center">
+        <motion.img
+          src="https://i.postimg.cc/L5J24415/Untitled-June-02-2026-at-08-34-33.png"
+          alt="Njoroge wa Mbaikia"
+          className="relative z-10 object-cover object-top"
+          style={{ width: 290, height: 500 }}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        />
+      </div>
+
     </section>
   );
 }
