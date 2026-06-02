@@ -71,12 +71,12 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Right — Image (Changed fixed w-[390px] to max-w-[390px] w-full) */}
-      <div className="relative max-w-[390px] w-full flex items-center justify-center hidden sm:flex">
+      {/* Right — Image (Styled as a clean background layer on mobile, moving side-by-side on desktop) */}
+      <div className="absolute sm:relative inset-0 sm:inset-auto z-0 sm:z-10 max-w-full sm:max-w-[390px] w-full flex items-end sm:items-center justify-end sm:justify-center opacity-15 sm:opacity-100 pointer-events-none sm:pointer-events-auto overflow-hidden">
         <motion.img
           src="https://i.postimg.cc/L5J24415/Untitled-June-02-2026-at-08-34-33.png"
           alt="Njoroge wa Mbaikia"
-          className="relative z-10 object-cover object-top"
+          className="object-cover object-top h-[70vh] sm:h-auto max-w-none sm:max-w-full"
           style={{ width: 290, height: 500 }}
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
