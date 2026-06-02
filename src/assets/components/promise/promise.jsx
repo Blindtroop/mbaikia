@@ -20,7 +20,6 @@ export default function ThePromise() {
       title: "Opportunity",
       body: "Youth employment programs should be expanded and made more accessible, ensuring young people in Juja gain practical skills and real pathways into meaningful work. This must be supported by stronger TVET expansion, aligned with industry needs to produce job-ready graduates.At the same time, direct funding and support for SMEs should be prioritized to empower local entrepreneurs, stimulate innovation, and strengthen Juja’s local economy through sustainable, community-driven growth",
     },
-            
     {
       number: "03",
       title: "Infrastructure",
@@ -29,7 +28,8 @@ export default function ThePromise() {
   ];
 
   return (
-    <section className=" px-1 py-24 w-400 mx-auto bg-[#f5f4f0] rounded-lg">
+    // Changed static w-400 to standard fluid responsive wrapper, updated global padding to handle small viewports nicely
+    <section className="px-4 sm:px-6 py-24 max-w-5xl w-full mx-auto bg-[#f5f4f0] rounded-lg">
       <motion.div {...fadeUp} className="flex items-center gap-3 mb-16">
         <span className="w-5 h-[1.5px] bg-[#89E900] block" />
         <span className="text-lg font-medium tracking-[0.12em] uppercase text-neutral-400">

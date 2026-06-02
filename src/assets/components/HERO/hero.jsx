@@ -2,10 +2,11 @@ import { motion } from "motion/react";
 
 export default function Hero() {
   return (
-    <section className="flex w-500 mx-auto bg-[#ffffff] overflow-hidden justify-center">
+    // Changed static w-500 to max-w-5xl w-full
+    <section className="flex max-w-8xl w-full mx-auto bg-[#ffffff] overflow-hidden justify-center">
 
-      {/* Left — Text */}
-      <div className="flex flex-col justify-center px-8 py-16 w-[600px]">
+      {/* Left — Text (Changed fixed w-[600px] to max-w-[600px] w-full) */}
+      <div className="flex flex-col justify-center px-8 py-16 max-w-[600px] w-full">
 
         {/* Constituency tag */}
         <div className="flex items-center gap-3 mb-10">
@@ -70,8 +71,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Right — Image */}
-      <div className="relative w-[390px] flex items-center justify-center">
+      {/* Right — Image (Changed fixed w-[390px] to max-w-[390px] w-full) */}
+      <div className="relative max-w-[390px] w-full flex items-center justify-center hidden sm:flex">
         <motion.img
           src="https://i.postimg.cc/L5J24415/Untitled-June-02-2026-at-08-34-33.png"
           alt="Njoroge wa Mbaikia"

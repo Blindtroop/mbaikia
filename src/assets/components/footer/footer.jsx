@@ -34,13 +34,13 @@ const Footer = () => {
               <li className="flex items-center">
                 <MdEmail className="mr-2" />
                 <a href="" className="hover:text-gray-300 transition duration-300">
-                  strydekicks@gmail.com
+                  njorogembaikia@gmail.com
                 </a>
               </li>
               <li className="flex items-center">
                 <MdPhone className="mr-2" />
                 <a href="tel:" className="hover:text-gray-300 transition duration-300">
-                  +254 115 112760
+                  +254 115 723379
                 </a>
               </li>
               <li className="flex items-center">
@@ -68,10 +68,10 @@ const Footer = () => {
             <h3 className="text-lg font-semibold">Get in Touch</h3>
             <p>Have a question or want to work together?</p>
             <button
-              className="bg-[#222222] border border-[#89E900] rounded-xl text-white font-bold py-2 px-4 transition duration-300"
+              className="bg-[#222222] border border-[#0F8643] rounded-xl text-white font-bold py-2 px-4 transition duration-300"
               aria-label="Contact us"
             >
-              Contact Us
+              Join Us
             </button>
           </div>
         </div>
