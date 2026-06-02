@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 export default function Hero() {
   return (
     // Changed static w-500 to max-w-5xl w-full
-    <section className="flex max-w-8xl w-full mx-auto bg-[#ffffff] overflow-hidden justify-center">
+    <section className="flex max-w-8xl w-full mx-auto bg-[#ffffff] relative overflow-hidden justify-center">
 
       {/* Left — Text (Changed fixed w-[600px] to max-w-[600px] w-full) */}
       <div className="flex flex-col justify-center px-8 py-16 max-w-[600px] w-full">
