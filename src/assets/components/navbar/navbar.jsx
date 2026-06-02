@@ -6,14 +6,15 @@ export default function Navbar() {
 
   const links = [
     { name: "Home", href: "#" },
-    { name: "My Campaign", href: "#" },
-    { name: "About", href: "#" },
+    { name: "My Promise", href: "#" },
+    { name: "Manifesto", href: "#" },
     { name: "Join the Movement", href: "#" },
   ];
 
   return (
     <>
-      <nav className="fixed top-5 left-1/2 z-50 -translate-x-1/2 w-250">
+      {/* Changed w-250 to a responsive width container */}
+      <nav className="fixed top-5 left-1/2 z-50 -translate-x-1/2 w-[90%] max-w-[1000px]">
         <div className="flex items-center justify-between gap-8 rounded-full border border-white/20 bg-white/10 px-6 py-3 backdrop-blur-lg shadow-lg">
           
           {/* Logo */}
@@ -23,8 +24,8 @@ export default function Navbar() {
             className="w-12 h-12 object-contain text-[#89E900]"
           />
 
-          {/* Desktop Menu */}
-          <ul className="hidden md:flex justify-between w-[500px] gap-6">
+          {/* Desktop Menu - Changed fixed w-[500px] to max-w for responsiveness */}
+          <ul className="hidden md:flex justify-between w-full max-w-[500px] gap-6">
             {links.map((link) => (
               <li key={link.name}>
                 <a
@@ -37,9 +38,9 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* Mobile Toggle */}
+          {/* Mobile Toggle - Swapped text-white to text-black to match desktop menu theme readability */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-black transition-transform active:scale-95"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -54,7 +55,8 @@ export default function Navbar() {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="block py-3 text-white hover:text-cyan-400"
+                    className="block py-3 px-4 text-black hover:text-cyan-400 transition"
+                    onClick={() => setIsOpen(false)} // Closes menu when a link is clicked
                   >
                     {link.name}
                   </a>

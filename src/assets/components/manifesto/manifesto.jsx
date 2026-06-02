@@ -21,8 +21,8 @@ export default function Manifesto() {
         {/* LEFT SIDE */}
         <motion.div {...fadeUp}>
           <div className="flex items-center gap-3 mb-10">
-            <span className="w-5 h-[1.5px] bg-[#89E900] block" />
-            <span className="text-[11px] font-medium tracking-[0.12em] uppercase text-neutral-500">
+            <span className="w-5 h-[1.5px] bg-[#0F8643] block" />
+            <span className="text-lg font-medium tracking-[0.12em] uppercase text-neutral-500">
               Manifesto
             </span>
           </div>
@@ -32,7 +32,7 @@ export default function Manifesto() {
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Not aspirations.<br />
-            <span className="text-[#89E900]">Commitments.</span>
+            <span className="text-[#0F8643]">Commitments.</span>
           </h2>
 
           <a
@@ -51,7 +51,7 @@ export default function Manifesto() {
         >
           {commitments.map((c, i) => (
             <div key={i} className="flex gap-5 items-start">
-              <span className="mt-1 w-1.5 h-1.5 rounded-full bg-[#89E900] flex-shrink-0" />
+              <span className="mt-1 w-1.5 h-1.5 rounded-full bg-[#0F8643] flex-shrink-0" />
               <p className="text-sm text-neutral-300 leading-relaxed font-light">
                 {c}
               </p>

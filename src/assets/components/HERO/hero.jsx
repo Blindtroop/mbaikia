@@ -2,14 +2,14 @@ import { motion } from "motion/react";
 
 export default function Hero() {
   return (
-    <section className="flex w-500 mx-auto bg-[#f5f4f0] overflow-hidden justify-center">
+    <section className="flex w-500 mx-auto bg-[#ffffff] overflow-hidden justify-center">
 
       {/* Left — Text */}
       <div className="flex flex-col justify-center px-8 py-16 w-[600px]">
 
         {/* Constituency tag */}
         <div className="flex items-center gap-3 mb-10">
-          <span className="w-5 h-[1.5px] bg-[#89E900] block" />
+          <span className="w-5 h-[1.5px] bg-[#0F8643] block" />
           <span className="text-[11px] font-medium tracking-[0.12em] uppercase text-neutral-500">
             Member of Parliament · Juja Constituency
           </span>
@@ -21,7 +21,7 @@ export default function Hero() {
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
           Njoroge<br />
-          <span className="text-[#89E900]">wa Mbaikia</span>
+          <span className="text-[#0F8643]">wa Mbaikia</span>
         </h1>
 
         <p className="text-[13px] uppercase tracking-[0.06em] text-neutral-400 mb-8">
@@ -40,7 +40,7 @@ export default function Hero() {
 
         {/* CTAs */}
         <div className="flex items-center gap-6">
-          <button className="bg-neutral-900 text-[#89E900] px-7 py-3 text-[12px] font-medium tracking-[0.1em] uppercase rounded-sm hover:bg-neutral-800 transition">
+          <button className="bg-neutral-900 text-[#0F8643] px-7 py-3 text-[12px] font-medium tracking-[0.1em] uppercase rounded-sm hover:bg-neutral-800 transition">
             Join the Movement
           </button>
           <span className="text-[15px] font-medium tracking-wide text-neutral-400 border-b border-neutral-300 pb-0.5 cursor-pointer hover:text-neutral-600 transition">

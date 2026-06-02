@@ -32,7 +32,7 @@ export default function ThePromise() {
     <section className=" px-1 py-24 w-400 mx-auto bg-[#f5f4f0] rounded-lg">
       <motion.div {...fadeUp} className="flex items-center gap-3 mb-16">
         <span className="w-5 h-[1.5px] bg-[#89E900] block" />
-        <span className="text-2xl font-medium tracking-[0.12em] uppercase text-neutral-400">
+        <span className="text-lg font-medium tracking-[0.12em] uppercase text-neutral-400">
           My Promise
         </span>
       </motion.div>

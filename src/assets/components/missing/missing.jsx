@@ -14,8 +14,8 @@ export default function MissingChildren() {
 
         <motion.div {...fadeUp} className="flex items-center gap-3 mb-16">
           <span className="w-5 h-[1.5px] bg-red-500 block" />
-          <span className="text-[11px] font-medium tracking-[0.12em] uppercase text-neutral-400">
-            Missing · Kenya
+          <span className="text-lg font-medium tracking-[0.12em] uppercase text-neutral-400">
+            Missing Children
           </span>
         </motion.div>
 
@@ -38,10 +38,10 @@ export default function MissingChildren() {
             </p>
 
             <a
-              href="https://missingchild.co.ke"
+              href="tel:116"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-neutral-900 text-white text-[12px] font-medium tracking-[0.1em] uppercase px-6 py-3 rounded-sm hover:bg-neutral-700 transition"
+              className="inline-flex items-center gap-2 bg-red-500 text-white text-[12px] font-medium tracking-[0.1em] uppercase px-6 py-3 rounded-sm hover:bg-neutral-700 transition"
             >
               Report a Missing Child →
             </a>
