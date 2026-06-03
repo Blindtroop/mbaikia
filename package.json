@@ -16,7 +16,7 @@
     "@tailwindcss/vite": "^4.3.0",
     "axios": "^1.17.0",
     "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
+    "dotenv-flow": "^4.1.0",
     "express": "^5.2.1",
     "framer-motion": "^12.40.0",
     "lucide-react": "^1.17.0",

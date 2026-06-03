@@ -38,7 +38,7 @@ export default function Navbar() {
               {link.name === "Donate" ? (
                 <button
                   onClick={scrollToDonate}
-                  className="text-white hover:text-[#0F8643] transition"
+                  className="text-white hover:text-[#ffffff] cursor-pointer transition bg-[#0F8643] hover:bg-[#0F8643]/80 py-1 px-3 rounded-full"
                 >
                   Donate
                 </button>

@@ -1,7 +1,7 @@
 import axios from "axios";
 import dotenv from "dotenv";
 
-dotenv.config();
+dotenv.config({ path: new URL('.env', import.meta.url).pathname });
 
 export const getAccessToken = async () => {
   const auth = Buffer.from(
