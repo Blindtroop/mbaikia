@@ -19,7 +19,7 @@ export default function Donate() {
     setStatus(null);
 
     try {
-      await axios.post("http://localhost:5000/donate", {
+      await axios.post("https://mbaikia-production.up.railway.app/donate", {
         phone,
         amount,
       });
