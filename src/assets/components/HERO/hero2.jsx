@@ -63,7 +63,7 @@ export default function Hero2() {
               {/* Constituency tag */}
               <div className="flex items-center gap-3 mb-10">
                 <span className="w-5 h-[1.5px] bg-[#0F8643] block" />
-                <span className="text-[11px] font-medium tracking-[0.12em] uppercase text-white/60">
+                <span className="text-[11px] font-medium tracking-[0.12em] uppercase text-white/90">
                   Member of Parliament · Juja Constituency
                 </span>
               </div>
@@ -85,7 +85,7 @@ export default function Hero2() {
               <div className="w-10 h-[2px] bg-white/80 mb-6" />
 
               {/* Body */}
-              <p className="text-sm text-white/60 leading-[1.8] max-w-sm mb-10 font-light">
+              <p className="text-sm text-white/90 leading-[1.8] max-w-sm mb-10 font-light">
                 Deliberate action. Lasting change.<br />
                 Building a Juja that works for everyone — through accountability,
                 innovation, and community-first leadership.
@@ -96,7 +96,7 @@ export default function Hero2() {
                 <button className="bg-[#0F8643] text-white px-7 py-3 text-[12px] font-medium tracking-[0.1em] uppercase rounded-sm hover:bg-[#0a6e35] transition">
                   Join the Movement
                 </button>
-                <span className="text-[15px] font-medium tracking-wide text-white/50 border-b border-white/20 pb-0.5 cursor-pointer hover:text-white/80 transition">
+                <span className="text-[15px] font-medium tracking-wide text-white/90 border-b border-white/20 pb-0.5 cursor-pointer hover:text-white/80 transition">
                   Our Vision →
                 </span>
               </div>

@@ -6,6 +6,7 @@ import Manifesto from './assets/components/manifesto/manifesto'
 import MissingChildren from './assets/components/missing/missing'
 import Change from './assets/components/change/change'
 import Join from './assets/components/join/join'
+import Donate from './assets/components/donate/donate'
 import Footer from './assets/components/footer/footer'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     <MissingChildren />
     <Change />
     <Join />
+    <Donate />
     <Footer />
     </div>
     </>
