@@ -30,7 +30,7 @@ export default function Navbar() {
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="text-black transition hover:text-cyan-400"
+                  className="text-white transition hover:text-[#0F8643]"
                 >
                   {link.name}
                 </a>

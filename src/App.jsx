@@ -1,5 +1,5 @@
 import './App.css'
-import Hero from './assets/components/HERO/hero'
+import Hero2 from './assets/components/HERO/hero2'
 import Navbar from './assets/components/navbar/navbar'
 import ThePromise from './assets/components/promise/promise'
 import Manifesto from './assets/components/manifesto/manifesto' 
@@ -13,7 +13,7 @@ function App() {
     <>
     <div className="min-h-screen overflow-x-hidden bg-[#f5f4f0]">
     <Navbar />
-    <Hero />
+    <Hero2 />
     <ThePromise />
     <Manifesto />
     <MissingChildren />
