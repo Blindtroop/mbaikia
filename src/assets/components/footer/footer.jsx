@@ -82,7 +82,7 @@ const Footer = ({ onContactOpen }) => {
             </p>
             <button
               onClick={onContactOpen}
-              className="border border-[#0F8643] cursor-pointer text-[#0F8643] text-[11px] font-medium tracking-[0.1em] uppercase px-5 py-2.5 rounded-sm hover:bg-[#0F8643] hover:text-neutral-900 transition"
+              className="border border-[#0F8643] cursor-pointer text-white text-[11px] font-medium tracking-[0.1em] uppercase px-5 py-2.5 rounded-sm hover:bg-[#0F8643] hover:text-neutral-900 transition"
             >
               Join the Movement
             </button>

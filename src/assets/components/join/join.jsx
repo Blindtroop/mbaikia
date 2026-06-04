@@ -21,13 +21,13 @@ export default function Join({ onContactOpen }) {
         <div className="flex flex-col gap-4 items-start md:items-end flex-shrink-0">
           <button
             onClick={onContactOpen}
-            className="bg-neutral-900 text-[#0F8643] px-10 py-4 cursor-pointer text-[12px] font-medium tracking-[0.12em] uppercase rounded-sm hover:bg-neutral-800 transition w-full md:w-auto"
+            className="bg-neutral-900 text-white px-10 py-4 cursor-pointer text-[12px] font-medium tracking-[0.12em] uppercase rounded-sm hover:bg-neutral-800 transition w-full md:w-auto"
           >
             Join the Movement
           </button>
           <button
             onClick={onContactOpen}
-            className="bg-transparent border border-neutral-900 cursor-pointer text-neutral-900 px-10 py-4 text-[12px] font-medium tracking-[0.12em] uppercase rounded-sm hover:bg-neutral-900 hover:text-[#0F8643] transition w-full md:w-auto"
+            className="bg-transparent border border-neutral-900 cursor-pointer text-white px-10 py-4 text-[12px] font-medium tracking-[0.12em] uppercase rounded-sm hover:bg-neutral-900 hover:text-[#0F8643] transition w-full md:w-auto"
           >
             Volunteer with Us
           </button>
