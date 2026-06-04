@@ -27,7 +27,7 @@ export default function Hero2() {
   }, []);
 
   return (
-    <section className="relative h-180 overflow-hidden">
+    <section id='hero' className="relative h-180 overflow-hidden scroll-mt-20">
 
       {/* ── Background Slides (unchanged) ── */}
       {slides.map((slide, index) => (

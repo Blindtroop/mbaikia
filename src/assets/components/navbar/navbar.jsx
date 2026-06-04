@@ -5,9 +5,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { name: "Home", href: "#" },
-    { name: "My Promise", href: "#" },
-    { name: "Manifesto", href: "#" },
+    { name: "Home", href: "#hero" },
+    { name: "My Promise", href: "#promise" },
     { name: "Donate", href: "#" },
   ];
 
@@ -32,7 +31,7 @@ export default function Navbar() {
         />
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex justify-between w-full max-w-[500px] gap-6">
+        <ul className="hidden md:flex justify-between w-80 max-w-[500px] gap-3">
           {links.map((link) => (
             <li key={link.name}>
               {link.name === "Donate" ? (

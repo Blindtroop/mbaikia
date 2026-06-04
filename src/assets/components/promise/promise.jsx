@@ -29,7 +29,7 @@ export default function ThePromise() {
 
   return (
     // Changed static w-400 to standard fluid responsive wrapper, updated global padding to handle small viewports nicely
-    <section className="px-4 sm:px-6 py-24 max-w-5xl w-full mx-auto bg-[#f5f4f0] rounded-lg">
+    <section id='promise'className="px-4 sm:px-6 py-24 max-w-5xl w-full mx-auto bg-[#f5f4f0] rounded-lg scroll-smooth">
       <motion.div {...fadeUp} className="flex items-center gap-3 mb-16">
         <span className="w-5 h-[1.5px] bg-[#89E900] block" />
         <span className="text-lg font-medium tracking-[0.12em] uppercase text-neutral-400">
