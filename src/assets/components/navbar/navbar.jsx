@@ -1,7 +1,28 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
+  const [visible, setVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY < 10) {
+        setVisible(true);
+      } else if (currentScrollY > lastScrollY) {
+        setVisible(false);
+      } else {
+        setVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY])
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
@@ -20,8 +41,7 @@ export default function Navbar() {
 };
 
   return (
-    <nav className="fixed top-5 left-1/2 z-50 -translate-x-1/2 w-[90%] max-w-[1000px]">
-      <div className="flex items-center justify-between gap-8 rounded-full border border-white/20 bg-white/10 px-6 py-3 backdrop-blur-lg shadow-lg">
+<nav className={`fixed top-5 left-1/2 z-50 -translate-x-1/2 w-[90%] max-w-[1000px] transition-transform duration-300 ease-in-out ${visible ? "translate-y-0" : "-translate-y-full"}`}>      <div className="flex items-center justify-between gap-8 rounded-full border border-white/20 bg-white/10 px-6 py-3 backdrop-blur-lg shadow-lg">
 
         {/* Logo */}
         <img
@@ -44,7 +64,7 @@ export default function Navbar() {
               ) : (
                 <a
                   href={link.href}
-                  className="text-white hover:text-[#0F8643] transition"
+                  className="text-black hover:text-[#0F8643] transition"
                 >
                   {link.name}
                 </a>
