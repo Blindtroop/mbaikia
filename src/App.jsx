@@ -39,6 +39,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/manifesto" element={<Doc />} />
+        <Route path="/join" element={<Join />} />
       </Routes>
     </BrowserRouter>
   )

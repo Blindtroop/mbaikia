@@ -183,7 +183,7 @@ function TheChange() {
     <section className="bg-[#f5f4f0] px-8 py-24">
       <div className="max-w-5xl mx-auto">
         <motion.div {...fadeUp} className="flex items-center gap-3 mb-16">
-          <span className="w-5 h-[1.5px] bg-[#89E900] block" />
+          <span className="w-5 h-[1.5px] bg-[#0F8643] block" />
           <span className="text-[11px] font-medium tracking-[0.12em] uppercase text-neutral-400">
             The Change
           </span>
@@ -216,7 +216,7 @@ function TheChange() {
 // ── 5. JOIN ─────────────────────────────────────────────────────
 function Join() {
   return (
-    <section className="bg-[#89E900] px-8 py-28">
+    <section className="bg-[#0F8643] px-8 py-28">
       <motion.div {...fadeUp} className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
         <h2
           className="text-4xl md:text-5xl font-bold text-neutral-900 leading-tight"
@@ -226,10 +226,10 @@ function Join() {
           <span className="text-white">Start here.</span>
         </h2>
         <div className="flex flex-col gap-4 items-start md:items-end flex-shrink-0">
-          <button className="bg-neutral-900 text-[#89E900] px-10 py-4 text-[12px] font-medium tracking-[0.12em] uppercase rounded-sm hover:bg-neutral-800 transition w-full md:w-auto">
+          <button className="bg-neutral-900 text-[#0F8643] px-10 py-4 text-[12px] font-medium tracking-[0.12em] uppercase rounded-sm hover:bg-neutral-800 transition w-full md:w-auto">
             Join the Movement
           </button>
-          <button className="bg-transparent border border-neutral-900 text-neutral-900 px-10 py-4 text-[12px] font-medium tracking-[0.12em] uppercase rounded-sm hover:bg-neutral-900 hover:text-[#89E900] transition w-full md:w-auto">
+          <button className="bg-transparent border border-neutral-900 text-neutral-900 px-10 py-4 text-[12px] font-medium tracking-[0.12em] uppercase rounded-sm hover:bg-neutral-900 hover:text-[#0F8643] transition w-full md:w-auto">
             Volunteer with Us
           </button>
         </div>

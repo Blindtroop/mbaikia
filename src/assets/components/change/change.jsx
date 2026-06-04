@@ -18,7 +18,7 @@ export default function Change() {
     <section className="bg-[#f5f4f0] px-4 sm:px-8 py-24">
       <div className="max-w-5xl mx-auto">
         <motion.div {...fadeUp} className="flex items-center gap-3 mb-16">
-          <span className="w-5 h-[1.5px] bg-[#89E900] block" />
+          <span className="w-5 h-[1.5px] bg-[#0F8643] block" />
           <span className="text-[11px] font-medium tracking-[0.12em] uppercase text-neutral-400">
             The Change
           </span>
@@ -39,7 +39,7 @@ export default function Change() {
                 <p className="text-[15px] text-neutral-400 font-light line-through decoration-neutral-300">{before}</p>
               </div>
               <div className="flex items-start gap-4">
-                <span className="text-[10px] uppercase tracking-widest text-[#89E900] mt-1 w-12 flex-shrink-0">2027</span>
+                <span className="text-[10px] uppercase tracking-widest text-[#0F8643] mt-1 w-12 flex-shrink-0">2027</span>
                 <p className="text-[15px] text-neutral-800 font-medium">{after}</p>
               </div>
             </motion.div>

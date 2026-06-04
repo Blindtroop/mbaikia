@@ -27,8 +27,7 @@ export default function Hero2() {
   }, []);
 
   return (
-    <section id='hero' className="relative h-180 overflow-hidden scroll-mt-20">
-
+    <section id="hero" className="relative h-180 overflow-hidden scroll-mt-20">
       {/* ── Background Slides (unchanged) ── */}
       {slides.map((slide, index) => (
         <div
@@ -56,10 +55,8 @@ export default function Hero2() {
       <div className="relative z-10 flex h-full items-center">
         <div className="container mx-auto px-6 lg:px-16">
           <div className="flex items-center gap-16 max-w-5xl">
-
             {/* Left — Text */}
             <div className="flex flex-col justify-center max-w-[540px] w-full">
-
               {/* Constituency tag */}
               <div className="flex items-center gap-3 mb-10">
                 <span className="w-5 h-[1.5px] bg-[#0F8643] block" />
@@ -73,7 +70,8 @@ export default function Hero2() {
                 className="text-5xl md:text-6xl font-bold leading-[1.05] tracking-tight mb-2 text-white"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
-                Njoroge<br />
+                Njoroge
+                <br />
                 <span className="text-[#0F8643]">wa Mbaikia</span>
               </h1>
 
@@ -86,19 +84,26 @@ export default function Hero2() {
 
               {/* Body */}
               <p className="text-sm text-white/90 leading-[1.8] max-w-sm mb-10 font-light">
-                Deliberate action. Lasting change.<br />
-                Building a Juja that works for everyone — through accountability,
-                innovation, and community-first leadership.
+                Deliberate action. Lasting change.
+                <br />
+                Building a Juja that works for everyone — through
+                accountability, innovation, and community-first leadership.
               </p>
 
               {/* CTAs */}
               <div className="flex items-center gap-6">
-                <button className="bg-[#0F8643] text-white px-7 py-3 text-[12px] font-medium tracking-[0.1em] uppercase rounded-sm hover:bg-[#0a6e35] transition">
-                  Join the Movement
-                </button>
-                <span className="text-[15px] font-medium tracking-wide text-white/90 border-b border-white/20 pb-0.5 cursor-pointer hover:text-white/80 transition">
+                <a href="#join">
+                  <button className="bg-[#0F8643] text-white px-7 py-3 cursor-pointer text-[12px] font-medium tracking-[0.1em] uppercase rounded-sm hover:bg-[#0a6e35] transition">
+                    Join the Movement
+                  </button>
+                </a>
+
+                <a
+                  href="/manifesto"
+                  className="text-[15px] font-medium  tracking-wide text-white/90 border-b border-white/20 pb-0.5 cursor-pointer hover:text-white/80 transition"
+                >
                   Our Vision →
-                </span>
+                </a>
               </div>
 
               {/* Stat strip */}
@@ -122,7 +127,6 @@ export default function Hero2() {
                 ))}
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -139,7 +143,6 @@ export default function Hero2() {
           />
         ))}
       </div>
-
     </section>
   );
 }

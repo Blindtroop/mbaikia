@@ -77,7 +77,7 @@ export default function Donate() {
         <button
           onClick={donate}
           disabled={loading}
-          className="bg-black text-[#0F8643] px-6 py-3"
+          className="bg-black text-[#0F8643] px-6 py-3 cursor-pointer"
         >
           {loading ? "Sending..." : "Donate via M-Pesa"}
         </button>

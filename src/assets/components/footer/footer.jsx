@@ -21,7 +21,7 @@ const Footer = ({ onContactOpen }) => {
             <img
               src="https://i.postimg.cc/tT4ZxC41/Screenshot-2026-06-02-121742.png"
               alt="Njoroge wa Mbaikia"
-              className="w-24"
+              className="w-24 cursor-pointer"
             />
             <p className="text-neutral-400 text-xs leading-relaxed font-light">
               Parliamentary Candidate · Juja Constituency · 2027
@@ -82,7 +82,7 @@ const Footer = ({ onContactOpen }) => {
             </p>
             <button
               onClick={onContactOpen}
-              className="border border-[#89E900] text-[#89E900] text-[11px] font-medium tracking-[0.1em] uppercase px-5 py-2.5 rounded-sm hover:bg-[#89E900] hover:text-neutral-900 transition"
+              className="border border-[#0F8643] cursor-pointer text-[#0F8643] text-[11px] font-medium tracking-[0.1em] uppercase px-5 py-2.5 rounded-sm hover:bg-[#0F8643] hover:text-neutral-900 transition"
             >
               Join the Movement
             </button>
