@@ -36,7 +36,7 @@ export default function Manifesto() {
           </h2>
 
           <a
-            href="#"
+            href="/manifesto"
             className="inline-flex items-center gap-2 text-[12px] font-medium tracking-wide text-neutral-400 border-b border-neutral-700 pb-0.5 hover:text-white hover:border-neutral-400 transition"
           >
             Read Full Manifesto →

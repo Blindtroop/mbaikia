@@ -51,7 +51,7 @@ export default function Navbar() {
         />
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex justify-between w-80 max-w-[500px] gap-3">
+        <ul className="hidden md:flex justify-between w-80 max-w-125 gap-3">
           {links.map((link) => (
             <li key={link.name}>
               {link.name === "Donate" ? (

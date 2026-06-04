@@ -12,6 +12,7 @@ import Join from './assets/components/join/join'
 import Donate from './assets/components/donate/donate'
 import Footer from './assets/components/footer/footer'
 import Contact from './assets/components/contact/contact'
+import Doc from './assets/components/manifesto-doc/doc'
 
 function Homepage() {
   const [contactOpen, setContactOpen] = useState(false);
@@ -37,6 +38,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/manifesto" element={<Doc />} />
       </Routes>
     </BrowserRouter>
   )
