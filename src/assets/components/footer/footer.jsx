@@ -93,7 +93,9 @@ const Footer = ({ onContactOpen }) => {
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-neutral-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-neutral-600 text-xs">
-            © {currentYear} Njoroge wa Mbaikia Campaign. All rights reserved.
+            © {currentYear} Made By <a href="https://portfolioo-kaluhi.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-[#0F8643] underline hover:text-white transition">
+              Lance Kaluhi.
+            </a> All rights reserved.
           </p>
           <p className="text-neutral-700 text-xs">
             Juja Constituency · Kiambu County · Kenya
