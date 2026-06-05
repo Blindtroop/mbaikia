@@ -13,6 +13,9 @@ import Donate from './assets/components/donate/donate'
 import Footer from './assets/components/footer/footer'
 import Contact from './assets/components/contact/contact'
 import Doc from './assets/components/manifesto-doc/doc'
+import emailjs from "@emailjs/browser";
+
+emailjs.init("8ywQ0HEygtTgVD3BW");
 
 function Homepage() {
   const [contactOpen, setContactOpen] = useState(false);

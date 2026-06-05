@@ -1,6 +1,37 @@
+import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import emailjs from "@emailjs/browser";
+
+const SERVICE_ID  = "service_usglzz5";
+const TEMPLATE_ID = "template_b7a9kdv";
 
 export default function ContactModal({ isOpen, onClose }) {
+  const [status, setStatus] = useState("idle"); // "idle" | "sending" | "success" | "error"
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("sending");
+
+    const form = e.target;
+
+    const params = {
+      from_name:  `${form.firstName.value} ${form.lastName.value}`,
+      from_email: form.email.value,
+      phone:      form.phone.value || "Not provided",
+      subject:    form.subject.value,
+      message:    form.message.value,
+    };
+
+    try {
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, params);
+      setStatus("success");
+      form.reset();
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      setStatus("error");
+    }
+  };
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -57,19 +88,24 @@ export default function ContactModal({ isOpen, onClose }) {
                   A message to Njoroge wa Mbaikia's campaign office.
                 </p>
 
-                {/* Form */}
-                <div className="flex flex-col gap-4">
+                {/* ✅ Real <form> tag with onSubmit */}
+                <form onSubmit={handleSubmit} className="flex flex-col gap-4">
 
                   {/* Name row */}
                   <div className="grid grid-cols-2 gap-4">
-                    {["First Name", "Last Name"].map((label, i) => (
-                      <div key={label} className="flex flex-col gap-1.5">
+                    {[
+                      ["First Name", "firstName", "John"],
+                      ["Last Name",  "lastName",  "Kamau"],
+                    ].map(([label, name, placeholder]) => (
+                      <div key={name} className="flex flex-col gap-1.5">
                         <label className="text-[11px] font-medium tracking-[0.08em] uppercase text-neutral-400">
                           {label}
                         </label>
                         <input
                           type="text"
-                          placeholder={i === 0 ? "John" : "Kamau"}
+                          name={name}
+                          placeholder={placeholder}
+                          required
                           className="bg-white border border-[#e0ddd6] rounded-sm px-3.5 py-2.5 text-[13px] text-neutral-800 font-light outline-none focus:border-[#0F8643] transition"
                         />
                       </div>
@@ -83,7 +119,9 @@ export default function ContactModal({ isOpen, onClose }) {
                     </label>
                     <input
                       type="email"
+                      name="email"
                       placeholder="you@example.com"
+                      required
                       className="bg-white border border-[#e0ddd6] rounded-sm px-3.5 py-2.5 text-[13px] text-black font-light outline-none focus:border-[#89E900] transition"
                     />
                   </div>
@@ -95,6 +133,7 @@ export default function ContactModal({ isOpen, onClose }) {
                     </label>
                     <input
                       type="tel"
+                      name="phone"
                       placeholder="+254 7XX XXX XXX"
                       className="bg-white border border-[#e0ddd6] rounded-sm px-3.5 py-2.5 text-[13px] text-black font-light outline-none focus:border-[#89E900] transition"
                     />
@@ -105,8 +144,12 @@ export default function ContactModal({ isOpen, onClose }) {
                     <label className="text-[11px] font-medium tracking-[0.08em] uppercase text-black">
                       Subject
                     </label>
-                    <select className="bg-white border border-[#e0ddd6] rounded-sm px-3.5 py-2.5 text-[13px] text-neutral-800 font-light outline-none focus:border-[#89E900] transition appearance-none">
-                      <option value="" disabled selected>Select a topic</option>
+                    <select
+                      name="subject"
+                      required
+                      className="bg-white border border-[#e0ddd6] rounded-sm px-3.5 py-2.5 text-[13px] text-neutral-800 font-light outline-none focus:border-[#89E900] transition appearance-none"
+                    >
+                      <option value="" disabled defaultValue="">Select a topic</option>
                       <option>General Inquiry</option>
                       <option>Report an Issue in Juja</option>
                       <option>Volunteer / Join the Movement</option>
@@ -121,23 +164,42 @@ export default function ContactModal({ isOpen, onClose }) {
                       Message
                     </label>
                     <textarea
+                      name="message"
                       rows={4}
                       placeholder="Tell us what's on your mind…"
+                      required
                       className="bg-white border border-[#e0ddd6] rounded-sm px-3.5 py-2.5 text-[13px] text-neutral-800 font-light outline-none focus:border-[#89E900] transition resize-none"
                     />
                   </div>
 
+                  {/* Status feedback */}
+                  {status === "success" && (
+                    <p className="text-[12px] text-[#0F8643] font-medium">
+                      ✓ Message sent! We'll respond within 48 hours.
+                    </p>
+                  )}
+                  {status === "error" && (
+                    <p className="text-[12px] text-red-500 font-medium">
+                      Something went wrong. Please try again.
+                    </p>
+                  )}
+
                   {/* Footer */}
                   <div className="flex items-center justify-between mt-1">
-                    <button className="bg-neutral-900 text-[#89E900] px-8 py-3 text-[11px] font-medium tracking-[0.1em] uppercase rounded-sm hover:bg-neutral-800 transition">
-                      Send Message
+                    {/* ✅ type="submit", no onClick needed */}
+                    <button
+                      type="submit"
+                      disabled={status === "sending"}
+                      className="bg-neutral-900 text-[#89E900] px-8 py-3 text-[11px] font-medium tracking-[0.1em] uppercase rounded-sm hover:bg-neutral-800 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {status === "sending" ? "Sending…" : "Send Message"}
                     </button>
                     <span className="text-[11px] text-neutral-300 font-light">
                       We respond within 48 hours.
                     </span>
                   </div>
 
-                </div>
+                </form>
               </div>
             </div>
           </motion.div>

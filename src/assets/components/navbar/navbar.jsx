@@ -47,7 +47,7 @@ export default function Navbar() {
         <img
           src="https://i.postimg.cc/sxw5pc6h/UGM-Symbol-Icon-2048x1170.webp"
           alt="Logo"
-          className="w-12 h-12 object-contain"
+          className="w-10 h-10 object-contain rounded cursor-pointer"
         />
 
         {/* Desktop Menu */}
@@ -57,7 +57,7 @@ export default function Navbar() {
               {link.name === "Donate" ? (
                 <button
                   onClick={scrollToDonate}
-                  className="text-white hover:text-[#ffffff] cursor-pointer transition bg-[#0F8643] hover:bg-[#0F8643]/80 py-1 px-3 rounded-full"
+                  className="text-white hover:text-[#ffffff] cursor-pointer transition bg-[#0F8643] border border-[#0f8670] hover:bg-[#0F8643]/80 px-4 rounded-full"
                 >
                   Donate
                 </button>
